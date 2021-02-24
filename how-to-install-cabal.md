@@ -1,6 +1,6 @@
 # How to install Cabal
 
-1. At [ghcup-hs](https://gitlab.haskell.org/haskell/ghcup-hs), somehow using `Simple bootstrap` to install only give us very old version of Cabal. Use Manual Install instead.
+At [ghcup-hs](https://gitlab.haskell.org/haskell/ghcup-hs), somehow using `Simple bootstrap` to install only give us very old version of Cabal. Use Manual Install instead.
 
 After downloading the binary, assume the binary name is `binary-name`, give it execute permission
 
@@ -24,5 +24,8 @@ ghcup install cabal       # Install the latest cabal
 ghc --version             # ghc might not be found since there is no binary named ghc in ~/.ghcup/bin. If this runs, skip the
                           # following commands
 cd ~/.ghcup/bin           # In here, you will see a lot of binary but they would all have version number attached
-
+ln -s cabal-3.4.0.0 cabal # This is an example, after this you can access cabal in the terminal
+                          # Do the same with other binaries that have version attached
+cabal update --verbose=3  # Update cabal package index, this would take a long time
 ```
+Done. Happy coding!

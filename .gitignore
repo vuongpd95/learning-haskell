@@ -21,3 +21,4 @@ cabal.project.local
 cabal.project.local~
 .HTF/
 .ghc.environment.*
+x86_64-linux-ghcup
