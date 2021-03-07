@@ -1,7 +1,7 @@
 module ChangeMood where
 
-data Mood = Blah | Woot deriving Show
+data Mood = Blah | Woot deriving (Show)
 
 reverse :: Mood -> Mood
 reverse Blah = Woot
-reverse    _ = Blah
+reverse _ = Blah

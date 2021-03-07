@@ -6,8 +6,8 @@ class Numberish a where
   toNumber :: a -> Integer
   defaultNumber :: a
 
-newtype Age =
-  Age Integer
+newtype Age
+  = Age Integer
   deriving (Eq, Show)
 
 instance Numberish Age where
@@ -15,8 +15,8 @@ instance Numberish Age where
   toNumber (Age n) = n
   defaultNumber = Age 65
 
-newtype Year =
-  Year Integer
+newtype Year
+  = Year Integer
   deriving (Eq, Show)
 
 instance Numberish Year where
@@ -26,6 +26,7 @@ instance Numberish Year where
 
 sumNumberish :: Numberish a => a -> a -> a
 sumNumberish a a' = fromNumber summed
-  where integerOfA = toNumber a
-        integerOfAPrime = toNumber a'
-        summed = integerOfA + integerOfAPrime
+  where
+    integerOfA = toNumber a
+    integerOfAPrime = toNumber a'
+    summed = integerOfA + integerOfAPrime

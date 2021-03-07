@@ -1,8 +1,9 @@
 module Indentation where
-foo x = 
+
+foo x =
   let y = x * 2
       z = x ^ 2
-  in 2 * y * z
+   in 2 * y * z
 
 area x = 3.14 * (x * x)
 
