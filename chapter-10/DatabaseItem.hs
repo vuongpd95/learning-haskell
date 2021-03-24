@@ -13,4 +13,9 @@ theDatabase =
   , DbDate (UTCTime (fromGregorian 1921 5 1) (secondsToDiffTime 34123))
   ]
 
+filterDbDate :: [DatabaseItem] -> [UTCTime] 
 
+filterDbDate = foldr (filter) [] theDatabase
+                where filter (DbDate t) arr = t:arr
+                      filter _ arr = arr 
+                        
